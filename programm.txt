@@ -1,0 +1,5 @@
+def hanoi_with_stacks(n, A, C, B):
+    if n > 0:
+        hanoi_with_stacks(n-1, A, B, C)
+        C.add(A.pop())
+        hanoi_with_stacks(n-1, B, C, A)
